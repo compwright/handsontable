@@ -200,7 +200,7 @@ class ColumnSorting extends BasePlugin {
       sortingState.sortOrder = this.hot.sortOrder;
     }
 
-    if (sortingState.hasOwnProperty('sortColumn') || sortingState.hasOwnProperty('sortOrder')) {
+    if (sortingState.hasOwnProperty('sortColumn') && sortingState.hasOwnProperty('sortOrder')) {
       Handsontable.hooks.run(this.hot, 'persistentStateSave', 'columnSorting', sortingState);
     }
 
